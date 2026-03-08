@@ -1,7 +1,7 @@
 # CypA Peptide Docking Study
 ### Computational Identification of High-Affinity Peptide Ligands for Cyclophilin A via Iterative Docking and Interface Analysis
 
-> **Illinois Mathematics and Science Academy (IMSA)**  
+> **Ravi Shah: Illinois Mathematics and Science Academy (IMSA)**  
 > **Supervised by Dr. Jose Villegas & Dr. Arumay Pal · UIC College of Pharmacy**
 
 ---
