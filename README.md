@@ -2,7 +2,7 @@
 ### Computational Identification of High-Affinity Peptide Ligands for Cyclophilin A via Iterative Docking and Interface Analysis
 
 > **Illinois Mathematics and Science Academy (IMSA)**  
-> **Supervised by Dr. Jose Villegas · UIC College of Pharmacy**
+> **Supervised by Dr. Jose Villegas & Dr. Arumay Pal · UIC College of Pharmacy**
 
 ---
 
@@ -197,5 +197,5 @@ Research supervised by **Dr. Jose Villegas** · UIC College of Pharmacy
 
 ## Acknowledgments
 
-This work was conducted under the mentorship of Dr. Jose Villegas at the University of Illinois Chicago (UIC) College of Pharmacy. Peptide–protein docking was performed using HPepDock (Huazhong University of Science and Technology). Thermodynamic analysis was carried out with PRODIGY (Bonvin Lab, Utrecht University). Interface analysis was performed using PPCheck (NCBS Bangalore).
+This work was conducted under the mentorship of Dr. Jose Villegas and Dr. Arumay Pal at the University of Illinois Chicago (UIC) College of Pharmacy. Peptide–protein docking was performed using HPepDock (Huazhong University of Science and Technology). Thermodynamic analysis was carried out with PRODIGY (Bonvin Lab, Utrecht University). Interface analysis was performed using PPCheck (NCBS Bangalore).
 
