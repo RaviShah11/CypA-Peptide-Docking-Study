@@ -165,43 +165,15 @@ Negative ΔΔG → residue is destabilizing in wildtype form (mutation may impro
 
 | Peptide | # Residues | ΔG (kcal/mol) | K_d (M) | vdW Energy (kJ/mol) | pLDDT |
 |---|---|---|---|---|---|
-| `cypA_AGPIA` | 5 | −10.4 | 2.3×10⁻⁸ | −100.03 | 81.07 |
-| `cypA_WDRVHPVHAGPIAP` | 14 | −10.0 | 4.3×10⁻⁸ | −176.37 | 90.35 |
+| `cypA_AGPIA` | 5 | −10.4 | 2.3×10⁻⁸ | −111.23 | 96.20 |
 | `cypA_WDRVHPVHAGPIAPGQM` | 17 | −10.4 | 2.4×10⁻⁸ | −133.28 | 82.52 |
 | `cypA_WDRVHPVHAGPIAPGQMREP` | 20 | −10.1 | 3.8×10⁻⁸ | −148.68 | 86.43 |
-| `cypA_HPVHAGPIAP` | 9 | −9.7 | 7.9×10⁻⁸ | −130.57 | 95.25 |
+| `cypA_WDRVHPVHAGPIAP` | 14 | −10.0 | 4.3×10⁻⁸ | −176.37 | 90.35 |
+| `cypA_HPVHAGPIA` | 9 | −9.7 | 7.9×10⁻⁸ | −130.57 | 95.25 |
 | `cypA_WDRVHPVHAGPIAPGQMREPR` | 21 | −9.7 | 8.3×10⁻⁸ | −122.79 | 88.82 |
 
----
 
-### Figures
 
-**Figure 1** — ΔG (kcal/mol) for all 28 peptides, ordered by peptide length  
-`[INSERT: figures/dG_by_peptide.png]`
-
-**Figure 2** — K_d (M, log scale) across all 28 complexes  
-`[INSERT: figures/Kd_scatter.png]`
-
-**Figure 3** — Energetic decomposition: H-bond, electrostatic, and vdW energy for all complexes  
-`[INSERT: figures/energy_decomposition.png]`
-
-**Figure 4** — Normalized interface energy (kJ/mol per residue) vs. peptide length  
-`[INSERT: figures/normalized_energy_vs_length.png]`
-
-**Figure 5** — Interface contact type breakdown (CC, CP, CA, PP, PA) across all 28 complexes  
-`[INSERT: figures/interface_contacts_stacked.png]`
-
-**Figure 6** — pLDDT confidence scores across all 28 complexes  
-`[INSERT: figures/pLDDT_scores.png]`
-
-**Figure 7** — HPepDock docking score vs. number of residues, color-coded by ΔG  
-`[INSERT: figures/docking_score_vs_length.png]`
-
-**Figure 8** — Alanine scan: ΔΔG per residue for top peptides *(in progress)*  
-`[INSERT: figures/alanine_scan_ddG.png]`
-
-**Figure 9** — PyMOL structural visualization: top 3 CypA–peptide complexes (surface + ribbon)  
-`[INSERT: figures/pymol_top3_complexes.png]`
 
 ---
 
@@ -212,18 +184,8 @@ Negative ΔΔG → residue is destabilizing in wildtype form (mutation may impro
 - **vdW dominates stabilization**: Van der Waals interactions are the primary energetic driver across nearly all complexes, consistent with CypA's deep hydrophobic active site cleft accommodating proline-rich sequences.
 - **Length–affinity non-linearity**: Binding affinity does not scale monotonically with peptide length. Several mid-length peptides (9–14 residues) outperform longer variants, suggesting additions beyond the optimal core may introduce unfavorable entropy penalties or steric clashes without commensurate energetic gain.
 
----
 
-## Citation
 
-If referencing this work:
-
-```
-[Your Name]. (2025). Computational Identification of High-Affinity CypA-Binding 
-Peptides via Iterative Docking and Interface Analysis. IMSA Student Research, 
-supervised by Dr. Jose Villegas, UIC College of Pharmacy.
-GitHub: https://github.com/[your-username]/cypA-peptide-docking
-```
 
 ---
 
@@ -231,7 +193,6 @@ GitHub: https://github.com/[your-username]/cypA-peptide-docking
 
 **Ravi** · Illinois Mathematics and Science Academy (IMSA)  
 Research supervised by **Dr. Jose Villegas** · UIC College of Pharmacy  
-Research interests: Computational structural biology, AI-driven drug discovery, AI in Medicine
 
 ---
 
@@ -239,8 +200,3 @@ Research interests: Computational structural biology, AI-driven drug discovery, 
 
 This work was conducted under the mentorship of Dr. Jose Villegas at the University of Illinois Chicago (UIC) College of Pharmacy. Peptide–protein docking was performed using HPepDock (Huazhong University of Science and Technology). Thermodynamic analysis was carried out with PRODIGY (Bonvin Lab, Utrecht University). Interface analysis was performed using PPCheck (NCBS Bangalore).
 
----
-
-## License
-
-MIT License — see [`LICENSE`](LICENSE) for details.
