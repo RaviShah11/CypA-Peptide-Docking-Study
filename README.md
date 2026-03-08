@@ -120,7 +120,7 @@ All 28 HPepDock top-ranked complex PDBs were submitted to PPCheck and results we
 |---|---|
 | > 90 | Very high confidence — backbone and side chain placement reliable |
 | 70–90 | Confident — generally correct fold |
-| 50–70 | Low confidence — treat with caution |
+| 50–70 | Low confidence — caution |
 | < 50 | Very low — likely disordered or prediction artifact |
 
 In this study, pLDDT scores were recorded for each docked complex as a quality filter. Complexes with pLDDT < 50 were flagged and their binding metrics interpreted conservatively, as poor structural confidence undermines the reliability of downstream PRODIGY and PPCheck analyses. QMEANDisCo (a composite model quality estimator from SWISS-MODEL) and RMSD values were additionally recorded as supplementary quality metrics where available.
