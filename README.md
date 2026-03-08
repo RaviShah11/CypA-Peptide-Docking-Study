@@ -22,54 +22,19 @@ cypA-peptide-docking/
 ├── README.md
 │
 ├── data/
-│   ├── raw/
-│   │   └── RESULTS_Sheet1.xlsx        ← Master results spreadsheet (all 28 complexes)
-│   └── processed/
-│       └── results_cleaned.csv        ← Parsed flat CSV for analysis
+│   └── RESULTS_Sheet1.xlsx          ← All 28 complex results
 │
 ├── structures/
-│   ├── receptor/
-│   │   └── cypA.pdb                   ← CypA receptor structure (preprocessed)
-│   └── peptides/
-│       ├── GP.pdb
-│       ├── GPI.pdb
-│       └── ...                        ← One PDB per peptide candidate
+│   ├── cypA.pdb                     ← CypA receptor
+│   └── docked_complexes/            ← Top-ranked PDB per peptide
 │
-├── docking/
-│   ├── hpepdock_outputs/
-│   │   └── cypA_[PEPTIDE]/            ← HPepDock top-ranked docked complex per peptide
-│   └── top_complexes/                 ← Curated best-cluster PDB files
+├── figures/                         ← Charts and PyMOL screenshots
 │
-├── alanine_scan/                      ← [IN PROGRESS]
-│   ├── mutants/                       ← PyMOL-generated Ala mutant PDB files
-│   ├── hpepdock_outputs/              ← Docking outputs for each Ala mutant
-│   └── alanine_scan_results.csv       ← Compiled ΔΔG per residue per peptide
+├── alanine_scan/                    ← [IN PROGRESS]
+│   ├── mutants/                     ← Ala mutant PDBs from PyMOL
+│   └── results/                     ← PRODIGY + PPCheck outputs
 │
-├── ppcheck_outputs/
-│   └── cypA_[PEPTIDE]_ppcheck.txt     ← Raw PPCheck interface contact reports
-│
-├── prodigy_outputs/
-│   └── cypA_[PEPTIDE]_prodigy.txt     ← Raw PRODIGY ΔG and Kd outputs
-│
-├── figures/
-│   ├── [INSERT: ΔG vs peptide length bar chart]
-│   ├── [INSERT: Kd scatter plot across all 28 peptides]
-│   ├── [INSERT: vdW vs H-bond energy decomposition]
-│   ├── [INSERT: Normalized interface energy heatmap]
-│   ├── [INSERT: Docking score vs # residues scatter]
-│   ├── [INSERT: pLDDT scores across complexes]
-│   ├── [INSERT: Interface contact type breakdown stacked bar]
-│   ├── [INSERT: Alanine scan ΔΔG bar chart – top peptides]  ← [IN PROGRESS]
-│   └── pymol_sessions/
-│       └── [INSERT: PyMOL session screenshots for top 5 complexes]
-│
-├── analysis/
-│   ├── parse_results.py               ← Load RESULTS_Sheet1.xlsx → cleaned CSV
-│   ├── rank_candidates.py             ← Composite scoring and ranking
-│   └── plot_figures.py                ← All figure generation scripts
-│
-└── results/
-    └── top_candidates.md              ← Summary and interpretation of best binders
+└── LICENSE
 ```
 
 ---
