@@ -33,8 +33,7 @@ cypA-peptide-docking/
 ├── alanine_scan/                    ← [IN PROGRESS]
 │   ├── mutants/                     ← Ala mutant PDBs from PyMOL
 │   └── results/                     ← PRODIGY + PPCheck outputs
-│
-└── LICENSE
+
 ```
 
 ---
