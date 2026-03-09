@@ -1,4 +1,4 @@
-# Cyclophillin A Peptide Docking Study
+# Cyclophillin A: Peptide Docking Study
 ### Computational Identification of High-Affinity Mimetic Peptides for Cyclophilin A Neutralization via Iterative Docking and Interface Analysis
 
 > **Ravi Shah: Illinois Mathematics and Science Academy (IMSA)**  
