@@ -162,7 +162,7 @@ Negative ΔΔG → residue is destabilizing in wildtype form (mutation may impro
 
 ### Top Performing Complexes (by ΔG)
 
-| Peptide | # Residues | ΔG (kcal/mol) | K_d (M) | vdW Energy (kJ/mol) | pLDDT |
+| Peptide | # Residues | ΔG (kcal/mol) | K_d (M) | vdW Energy (kJ/mol) | avg_pLDDT |
 |---|---|---|---|---|---|
 | `cypA_AGPIA` | 5 | −10.4 | 2.3×10⁻⁸ | −111.23 | 96.20 |
 | `cypA_WDRVHPVHAGPIAPGQM` | 17 | −10.4 | 2.4×10⁻⁸ | −133.28 | 82.52 |
