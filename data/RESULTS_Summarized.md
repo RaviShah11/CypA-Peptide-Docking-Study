@@ -1,6 +1,6 @@
 # CypA Peptide Docking — Full Results Table
 
-| Protein-protein complex | # Residues | ΔG (kcal/mol) | K_d (M) | vdW Energy (kJ/mol) | pLDDT |
+| Protein-protein complex | # Residues | ΔG (kcal/mol) | K_d (M) | vdW Energy (kJ/mol) | avg_pLDDT |
 |---|---|---|---|---|---|
 | cypA_GP | 2 | −5.5 | 9.1×10⁻⁵ | −49.72 | — |
 | cypA_GPI | 3 | −5.9 | 4.4×10⁻⁵ | −95.46 | — |
