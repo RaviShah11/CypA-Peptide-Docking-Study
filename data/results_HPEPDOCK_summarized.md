@@ -1,4 +1,4 @@
-# CypA Peptide Docking — Full Results Table
+# CypA Peptide Docking (HPEPDOCK) — Full Results Table
 
 | Protein-protein complex | # Residues | ΔG (kcal/mol) | K_d (M) | vdW Energy (kJ/mol) | avg_pLDDT |
 |---|---|---|---|---|---|
