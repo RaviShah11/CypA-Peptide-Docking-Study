@@ -1,4 +1,4 @@
-# Alanine Scanning — HPepDock Pipeline
+# Alanine Scanning — Alphafold Pipeline
 ## cypA_WDRVHPVHAGPIAPGQMREPR
 
 **Wildtype ΔG:** −7.1 kcal/mol
