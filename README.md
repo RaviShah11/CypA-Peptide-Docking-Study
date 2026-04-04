@@ -239,7 +239,7 @@ Negative ΔΔG → residue is destabilizing in wildtype form.
 
 HPepDock consistently predicts stronger binding affinities than AlphaFold 3 across nearly all peptides. The HPepDock ΔG values range from −4.5 to −10.4 kcal/mol, while AlphaFold 3 values cluster in a tighter range of −5.2 to −11.0 kcal/mol with most peptides falling between −6.5 and −7.5 kcal/mol. This compression in the AlphaFold 3 predictions suggests the model may be less sensitive to differences in peptide sequence when scoring binding affinity via PRODIGY, likely because co-folded structures tend to converge toward similar interface geometries regardless of sequence variation.
 
-The one notable exception is `cypA_HAGPIAPGQMREPR` (14 residues), which AlphaFold 3 predicts as the strongest binder at ΔG = −11.0 kcal/mol and K_d = 8.1×10⁻⁹ M — stronger than any HPepDock prediction for the same peptide (ΔG = −7.4 kcal/mol). This divergence warrants closer inspection of the predicted binding pose for this complex under both methods.
+The one notable exception is `cypA_HAGPIAPGQMREPR` (14 residues), which AlphaFold 3 predicts as the strongest binder at ΔG = −11.0 kcal/mol and K_d = 8.1×10⁻⁹ M, stronger than any HPepDock prediction for the same peptide (ΔG = −7.4 kcal/mol). This divergence warrants closer inspection of the predicted binding pose for this complex under both methods.
 
 ### Van der Waals Energy
 
@@ -249,7 +249,7 @@ Several HPepDock results show anomalously positive vdW values (`cypA_HPVHAGPIAPG
 
 ### Agreement Between Methods
 
-The two methods show the strongest agreement for mid-length peptides in the 13–16 residue range, where both pipelines rank similar sequences as moderate binders. The largest disagreements occur at the extremes: short peptides (4–5 residues) are ranked much more favorably by HPepDock than AlphaFold 3, while a few longer charged peptides (e.g., `cypA_HAGPIAPGQMREPR`, `cypA_HPVHAGPIAPGQMREPR`) are ranked more favorably by AlphaFold 3. Peptides where both methods agree on strong binding — such as `cypA_WDRVHPVHAGPIAPGQMREP` (HPepDock: −10.1, AlphaFold 3: −7.5) — represent the most confident candidates for experimental follow-up.
+The two methods show the strongest agreement for mid-length peptides in the 13–16 residue range, where both pipelines rank similar sequences as moderate binders. The largest disagreements occur at the extremes: short peptides (4–5 residues) are ranked much more favorably by HPepDock than AlphaFold 3, while a few longer charged peptides (e.g., `cypA_HAGPIAPGQMREPR`, `cypA_HPVHAGPIAPGQMREPR`) are ranked more favorably by AlphaFold 3. Peptides where both methods agree on strong binding, such as `cypA_WDRVHPVHAGPIAPGQMREP` (HPepDock: −10.1, AlphaFold 3: −7.5), represent the most confident candidates for experimental follow-up.
 
 ---
 
@@ -269,9 +269,13 @@ Each non-alanine residue was individually mutated to alanine using the PyMOL Mut
 
 | Mutant | Position | ΔG (kcal/mol) | K_d (M) | ΔΔG (kcal/mol) |
 |---|---|---|---|---|
+| W→A | 1 | −10.0 | 4.9×10⁻⁸ | −0.3 |
 | D→A | 2 | −10.1 | 4.1×10⁻⁸ | −0.4 |
+| R→A | 3 | −9.9 | 5.6×10⁻⁸ | −0.2 |
+| V→A | 4 | −9.9 | 5.2×10⁻⁸ | −0.2 |
 | H→A | 5 | −9.7 | 7.4×10⁻⁸ | 0.0 |
 | P→A | 6 | −9.9 | 5.2×10⁻⁸ | −0.2 |
+| V→A | 7 | −9.8 | 6.2×10⁻⁸ | −0.1 |
 | H→A | 8 | −10.9 | 9.9×10⁻⁹ | **−1.2** |
 | G→A | 10 | −10.4 | 2.2×10⁻⁸ | −0.7 |
 | P→A | 11 | −10.4 | 2.2×10⁻⁸ | −0.7 |
@@ -285,27 +289,31 @@ Each non-alanine residue was individually mutated to alanine using the PyMOL Mut
 | P→A | 20 | −10.4 | 2.2×10⁻⁸ | −0.7 |
 | R→A | 21 | −10.3 | 2.8×10⁻⁸ | −0.6 |
 
-> **Note:** R3A, V4A, and V7A were not included in the HPepDock scan.
+> **Bold ΔΔG** indicates |ΔΔG| ≥ 1.0 kcal/mol (hotspot threshold).
 
 #### Interface Contacts
 
-| Mutant | ICs CC | ICs CP | ICs CA | ICs PP | ICs PA | ICs AA |
-|---|---|---|---|---|---|---|
-| D2A | 6 | 9 | 22 | 0 | 18 | 31 |
-| H5A | 1 | 8 | 23 | 0 | 19 | 31 |
-| P6A | 4 | 9 | 22 | 0 | 18 | 31 |
-| H8A | 4 | 3 | 18 | 0 | 25 | 35 |
-| G10A | 4 | 9 | 22 | 0 | 20 | 32 |
-| P11A | 4 | 9 | 22 | 0 | 20 | 31 |
-| I12A | 4 | 9 | 21 | 0 | 20 | 31 |
-| P14A | 4 | 9 | 22 | 0 | 20 | 31 |
-| G15A | 4 | 9 | 22 | 0 | 20 | 31 |
-| Q16A | 4 | 7 | 23 | 0 | 16 | 34 |
-| M17A | 4 | 9 | 22 | 0 | 20 | 31 |
-| R18A | 4 | 9 | 22 | 0 | 20 | 31 |
-| E19A | 4 | 9 | 22 | 0 | 20 | 31 |
-| P20A | 4 | 9 | 22 | 0 | 20 | 31 |
-| R21A | 3 | 9 | 22 | 0 | 20 | 31 |
+| Mutant | ICs CC | ICs CP | ICs CA | ICs PP | ICs PA | ICs AA | NIS Charged (%) |
+|---|---|---|---|---|---|---|---|
+| W1A | 6 | 9 | 22 | 0 | 18 | 31 | 35.25 |
+| D2A | 6 | 9 | 22 | 0 | 18 | 31 | 34.43 |
+| R3A | 4 | 9 | 22 | 0 | 18 | 31 | 34.43 |
+| V4A | 4 | 9 | 22 | 0 | 18 | 31 | 35.25 |
+| H5A | 1 | 8 | 23 | 0 | 19 | 31 | 34.68 |
+| P6A | 4 | 9 | 22 | 0 | 18 | 31 | 35.25 |
+| V7A | 4 | 9 | 21 | 0 | 18 | 29 | 35.25 |
+| H8A | 4 | 3 | 18 | 0 | 25 | 35 | 34.96 |
+| G10A | 4 | 9 | 22 | 0 | 20 | 32 | 35.54 |
+| P11A | 4 | 9 | 22 | 0 | 20 | 31 | 35.54 |
+| I12A | 4 | 9 | 21 | 0 | 20 | 31 | 35.54 |
+| P14A | 4 | 9 | 22 | 0 | 20 | 31 | 35.25 |
+| G15A | 4 | 9 | 22 | 0 | 20 | 31 | 35.54 |
+| Q16A | 4 | 7 | 23 | 0 | 16 | 34 | 35.54 |
+| M17A | 4 | 9 | 22 | 0 | 20 | 31 | 35.54 |
+| R18A | 4 | 9 | 22 | 0 | 20 | 31 | 34.43 |
+| E19A | 4 | 9 | 22 | 0 | 20 | 31 | 34.71 |
+| P20A | 4 | 9 | 22 | 0 | 20 | 31 | 35.54 |
+| R21A | 3 | 9 | 22 | 0 | 20 | 31 | 34.71 |
 
 ---
 
@@ -395,9 +403,13 @@ Each non-alanine residue was individually mutated to alanine using the PyMOL Mut
 
 | Position | Residue | ΔΔG HPepDock | ΔΔG AlphaFold 3 | Agreement |
 |---|---|---|---|---|
+| 1 | W | −0.3 | +0.2 | Disagree |
 | 2 | D | −0.4 | +0.1 | Disagree |
+| 3 | R | −0.2 | +0.1 | Disagree |
+| 4 | V | −0.2 | 0.0 | Weak agree |
 | 5 | H | 0.0 | +0.2 | Weak agree |
 | 6 | P | −0.2 | 0.0 | Weak agree |
+| 7 | V | −0.1 | 0.0 | Weak agree |
 | 8 | H | **−1.2** | −0.3 | Direction agrees, magnitude differs |
 | 10 | G | −0.7 | 0.0 | Disagree |
 | 11 | P | −0.7 | 0.0 | Disagree |
@@ -417,15 +429,17 @@ Each non-alanine residue was individually mutated to alanine using the PyMOL Mut
 
 **The HPepDock scan shows much larger ΔΔG magnitudes across the board.** The wildtype ΔG in HPepDock is −9.7 kcal/mol, so mutations shift ΔG into a range of −9.5 to −10.9 kcal/mol, producing ΔΔG values of ±0.2 to −1.2 kcal/mol. The AlphaFold 3 wildtype ΔG is −7.1 kcal/mol, and mutant ΔG values are tightly compressed between −6.9 and −7.4 kcal/mol, yielding ΔΔG values no larger than ±0.3 kcal/mol. This compression is consistent with the broader pattern observed in the full peptide screen, where AlphaFold 3 PRODIGY scores are less sensitive to sequence variation.
 
-**Q16 is the only residue flagged as destabilizing by HPepDock (ΔΔG = +0.2).** This is consistent across both pipelines (AlphaFold 3: 0.0), indicating Q16 contributes minimally or slightly negatively to binding. The HPepDock interface contact data for Q16A shows a loss of one CP contact and gain of one CA contact relative to most other mutants, and an increase in apolar-apolar contacts from 31 to 34, suggesting Q16 in the wildtype is forming a polar contact that, when replaced by alanine, is compensated by hydrophobic packing.
+**The N-terminal residues W1, D2, R3, and V4 show modest but non-zero ΔΔG in HPepDock** (−0.3, −0.4, −0.2, −0.2 kcal/mol respectively), contrasting with near-zero or slightly positive values in AlphaFold 3. The HPepDock interface contact data for W1A and D2A both show elevated CC contacts (6) relative to most other mutants (4), indicating these residues influence charged contact geometry at the interface even though they sit at the N-terminus. Despite this, none of W1–V4 approach hotspot magnitude, and their AlphaFold 3 ΔΔG values of 0.0 to +0.2 kcal/mol suggest they contribute little to binding and may be dispensable for a minimized peptide design.
+
+**Q16 is the only residue flagged as destabilizing by HPepDock (ΔΔG = +0.2).** This is consistent across both pipelines (AlphaFold 3: 0.0), indicating Q16 contributes minimally or slightly negatively to binding. The HPepDock interface contact data for Q16A shows a loss of one CP contact relative to most other mutants and an increase in apolar-apolar contacts from 31 to 34, suggesting Q16 in the wildtype forms a polar contact that, when replaced by alanine, is compensated by hydrophobic packing.
 
 **The core PIAPG motif (positions 11, 14, 15) shows consistent modest stabilizing ΔΔG in HPepDock** (all −0.7 kcal/mol), indicating these prolines and glycines are not individually critical but collectively define the backbone geometry of the binding loop. Their AlphaFold 3 ΔΔG values of −0.1 kcal/mol are directionally consistent.
 
 **Interface contacts are far more variable across mutants in HPepDock than in AlphaFold 3.** In the AlphaFold 3 scan, almost all mutants share an identical contact profile (0 CC, 4 CP, 16 CA, 0 PP, 11 PA, 24 AA), with only H8A and M17A showing any deviation. The HPepDock contact profiles vary substantially across mutants, with CC contacts ranging from 1 to 6, CP from 3 to 9, and PA from 16 to 25. This suggests the HPepDock pipeline, which re-docks each mutant independently, captures genuine pose-level changes induced by each substitution, while the AlphaFold 3 co-folded structures converge toward a near-identical interface geometry regardless of which residue is mutated.
 
-**NIS charged values in the AlphaFold 3 scan are uniformly around 33%.** The small variation (32.56–33.59%) does not correlate with ΔΔG in a meaningful way, reflecting the compressed PRODIGY sensitivity noted above.
+**NIS charged values in both pipelines cluster in a narrow band.** HPepDock NIS charged values range from 34.43–35.54%, while AlphaFold 3 values range from 32.56–33.59%. Neither set shows meaningful correlation with ΔΔG, consistent with NIS charged being a receptor-surface property that changes little when a single peptide residue is swapped to alanine.
 
-Overall, the HPepDock alanine scan is more informative for identifying per-residue contributions in this peptide. H8 is the clearest functional residue, and H8A is worth prioritizing in follow-up design iterations. Q16 could be truncated or substituted without penalty. The N-terminal flanking residues W1, D2, R3, and V4 show near-zero ΔΔG in AlphaFold 3, suggesting they contribute little to binding and may be dispensable for a minimized peptide design.
+Overall, the HPepDock alanine scan is more informative for identifying per-residue contributions in this peptide. H8 is the clearest functional residue, and H8A is worth prioritizing in follow-up design iterations. Q16 could be substituted without penalty. The N-terminal W1–V4 segment shows only minor contributions and could potentially be trimmed to produce a shorter, more tractable peptide without significant affinity loss.
 
 ---
 
