@@ -4,7 +4,8 @@
 **Wildtype ΔG:** −9.7 kcal/mol  
 **Wildtype K_d:** 8.3×10⁻⁸ M
 
-Each non-alanine residue was individually mutated to alanine using the PyMOL Mutagenesis Wizard and rescored with PRODIGY. ΔΔG = ΔG_mutant − ΔG_wildtype.
+Each non-alanine residue was individually mutated to alanine using the PyMOL Mutagenesis Wizard and rescored with PRODIGY. ΔΔG = ΔG_mutant − ΔG_wildtype.  
+Position 9 (A9) is alanine in the wildtype sequence and was not scanned.
 
 ---
 
@@ -12,10 +13,14 @@ Each non-alanine residue was individually mutated to alanine using the PyMOL Mut
 
 | Mutant | Position | ΔG (kcal/mol) | K_d (M) | ΔΔG (kcal/mol) |
 |---|---|---|---|---|
+| W→A | 1 | −10.0 | 4.9×10⁻⁸ | −0.3 |
 | D→A | 2 | −10.1 | 4.1×10⁻⁸ | −0.4 |
+| R→A | 3 | −9.9 | 5.6×10⁻⁸ | −0.2 |
+| V→A | 4 | −9.9 | 5.2×10⁻⁸ | −0.2 |
 | H→A | 5 | −9.7 | 7.4×10⁻⁸ | 0.0 |
 | P→A | 6 | −9.9 | 5.2×10⁻⁸ | −0.2 |
-| H→A | 8 | −10.9 | 9.9×10⁻⁹ | −1.2 |
+| V→A | 7 | −9.8 | 6.2×10⁻⁸ | −0.1 |
+| H→A | 8 | −10.9 | 9.9×10⁻⁹ | **−1.2** |
 | G→A | 10 | −10.4 | 2.2×10⁻⁸ | −0.7 |
 | P→A | 11 | −10.4 | 2.2×10⁻⁸ | −0.7 |
 | I→A | 12 | −10.3 | 2.6×10⁻⁸ | −0.6 |
@@ -28,24 +33,30 @@ Each non-alanine residue was individually mutated to alanine using the PyMOL Mut
 | P→A | 20 | −10.4 | 2.2×10⁻⁸ | −0.7 |
 | R→A | 21 | −10.3 | 2.8×10⁻⁸ | −0.6 |
 
+
 ---
 
 ## Interface Contacts
 
-| Mutant | ICs CC | ICs CP | ICs CA | ICs PP | ICs PA | ICs AA |
-|---|---|---|---|---|---|---|
-| D2A | 6 | 9 | 22 | 0 | 18 | 31 |
-| H5A | 1 | 8 | 23 | 0 | 19 | 31 |
-| P6A | 4 | 9 | 22 | 0 | 18 | 31 |
-| H8A | 4 | 3 | 18 | 0 | 25 | 35 |
-| G10A | 4 | 9 | 22 | 0 | 20 | 32 |
-| P11A | 4 | 9 | 22 | 0 | 20 | 31 |
-| I12A | 4 | 9 | 21 | 0 | 20 | 31 |
-| P14A | 4 | 9 | 22 | 0 | 20 | 31 |
-| G15A | 4 | 9 | 22 | 0 | 20 | 31 |
-| Q16A | 4 | 7 | 23 | 0 | 16 | 34 |
-| M17A | 4 | 9 | 22 | 0 | 20 | 31 |
-| R18A | 4 | 9 | 22 | 0 | 20 | 31 |
-| E19A | 4 | 9 | 22 | 0 | 20 | 31 |
-| P20A | 4 | 9 | 22 | 0 | 20 | 31 |
-| R21A | 3 | 9 | 22 | 0 | 20 | 31 |
+| Mutant | ICs CC | ICs CP | ICs CA | ICs PP | ICs PA | ICs AA | NIS Charged (%) |
+|---|---|---|---|---|---|---|---|
+| W1A | 6 | 9 | 22 | 0 | 18 | 31 | 35.25 |
+| D2A | 6 | 9 | 22 | 0 | 18 | 31 | 34.43 |
+| R3A | 4 | 9 | 22 | 0 | 18 | 31 | 34.43 |
+| V4A | 4 | 9 | 22 | 0 | 18 | 31 | 35.25 |
+| H5A | 1 | 8 | 23 | 0 | 19 | 31 | 34.68 |
+| P6A | 4 | 9 | 22 | 0 | 18 | 31 | 35.25 |
+| V7A | 4 | 9 | 21 | 0 | 18 | 29 | 35.25 |
+| H8A | 4 | 3 | 18 | 0 | 25 | 35 | 34.96 |
+| G10A | 4 | 9 | 22 | 0 | 20 | 32 | 35.54 |
+| P11A | 4 | 9 | 22 | 0 | 20 | 31 | 35.54 |
+| I12A | 4 | 9 | 21 | 0 | 20 | 31 | 35.54 |
+| P14A | 4 | 9 | 22 | 0 | 20 | 31 | 35.25 |
+| G15A | 4 | 9 | 22 | 0 | 20 | 31 | 35.54 |
+| Q16A | 4 | 7 | 23 | 0 | 16 | 34 | 35.54 |
+| M17A | 4 | 9 | 22 | 0 | 20 | 31 | 35.54 |
+| R18A | 4 | 9 | 22 | 0 | 20 | 31 | 34.43 |
+| E19A | 4 | 9 | 22 | 0 | 20 | 31 | 34.71 |
+| P20A | 4 | 9 | 22 | 0 | 20 | 31 | 35.54 |
+| R21A | 3 | 9 | 22 | 0 | 20 | 31 | 34.71 |
+
